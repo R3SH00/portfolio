@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JungTech — Infrastructure Réseau</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f1115;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 25px 8%;
+            border-bottom: 1px solid #292d35;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 22px;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .hero {
+            padding: 90px 8% 70px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .hero span {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin: 10px 0 20px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 8%;
+        }
+
+        h3 {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: #171a20;
+            border: 1px solid #292d35;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #aaa;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: #bbb;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .architecture {
+            background: #171a20;
+            border: 1px solid #292d35;
+            border-radius: 12px;
+            padding: 30px;
+            overflow-x: auto;
+        }
+
+        pre {
+            color: #ccc;
+            font-family: Consolas, monospace;
+            line-height: 1.5;
+        }
+
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .screenshots img {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #292d35;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+            border: 1px solid #444;
+            padding: 10px 18px;
+            border-radius: 8px;
+        }
+
+        .back:hover {
+            background: #222;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+            border-top: 1px solid #292d35;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>R3SH00</h1>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="index.html#projets">Projets</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+
+    <span>PROJET PERSONNEL — JUNGTECH</span>
+
+    <h2>Infrastructure systèmes & réseaux</h2>
+
+    <p>
+        Mise en place d'une infrastructure réseau virtualisée complète
+        comprenant un réseau interne, un serveur DHCP, un serveur DNS,
+        un contrôleur de domaine Samba Active Directory et un serveur
+        de fichiers Samba.
+    </p>
+
+    <a class="back" href="index.html">← Retour au portfolio</a>
+
+</section>
+
+
+<section>
+
+    <h3>Présentation</h3>
+
+    <div class="card">
+
+        <p>
+            JungTech est un laboratoire d'infrastructure réalisé sous
+            VirtualBox afin de reproduire un environnement informatique
+            d'entreprise.
+        </p>
+
+        <br>
+
+        <p>
+            L'objectif était de mettre en place une infrastructure permettant
+            à des postes Windows d'obtenir automatiquement leur configuration
+            réseau, de résoudre les noms internes, de s'authentifier sur un
+            domaine Active Directory et d'accéder à des ressources partagées
+            selon leurs droits.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h3>Architecture</h3>
+
+    <div class="architecture">
+
+<pre>
+                         JUNGTECH-NETWORK
+                          192.168.10.0/24
+                                  │
+                ┌─────────────────┴─────────────────┐
+                │                                   │
+              VM01                                 VM02
+       192.168.10.10                         192.168.10.20
+       Serveur réseau                        Contrôleur de domaine
+                │                                   │
+        ┌───────┼────────┐                 ┌────────┼────────┐
+        │       │        │                 │        │        │
+      DHCP    BIND9    Samba             AD      LDAP   Kerberos
+        │                │
+        │             Winbind
+        │
+        └──────────────────────┐
+                               │
+                         Windows 11
+                      192.168.10.100+
+</pre>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h3>Infrastructure réseau</h3>
+
+    <div class="grid">
+
+        <div class="card">
+            <h4>Réseau interne</h4>
+            <p>
+                Réseau VirtualBox dédié au laboratoire :
+                <strong>JungTech-Network</strong>
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>Adressage</h4>
+            <p>
+                Réseau IPv4 : <strong>192.168.10.0/24</strong>
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>DHCP</h4>
+            <p>
+                VM01 attribue automatiquement les adresses IP
+                de <strong>192.168.10.100 à 192.168.10.200</strong>.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>DNS</h4>
+            <p>
+                BIND9 fournit la résolution DNS interne du domaine
+                <strong>jungtech.local</strong>.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h3>VM01 — Serveur réseau</h3>
+
+    <div class="grid">
+
+        <div class="card">
+            <h4>DHCP</h4>
+            <p>
+                Attribution automatique des paramètres réseau
+                aux postes clients.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>BIND9</h4>
+            <p>
+                Gestion de la résolution DNS du réseau interne.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>Samba</h4>
+            <p>
+                Hébergement des partages de fichiers réseau.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>Winbind</h4>
+            <p>
+                Permet à Linux d'utiliser les utilisateurs et groupes
+                provenant de l'Active Directory.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h3>VM02 — Contrôleur de domaine</h3>
+
+    <div class="card">
+
+        <p>
+            VM02 héberge le contrôleur de domaine
+            <strong>Samba Active Directory</strong>.
+        </p>
+
+        <br>
+
+        <ul>
+            <li>Domaine : <strong>JUNGTECH.LOCAL</strong></li>
+            <li>NetBIOS : <strong>JUNGTECH</strong></li>
+            <li>Contrôleur : <strong>DC01</strong></li>
+            <li>Adresse IP : <strong>192.168.10.20</strong></li>
+        </ul>
+
+        <br>
+
+        <p>
+            Le contrôleur centralise les comptes utilisateurs,
+            les groupes et l'authentification du domaine.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h3>Active Directory</h3>
+
+    <div class="grid">
+
+        <div class="card">
+            <h4>Utilisateurs</h4>
+            <p>
+                Alice et Bob sont gérés directement dans
+                l'Active Directory.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>Groupes</h4>
+            <p>
+                Les groupes <strong>Direction</strong> et
+                <strong>Comptabilite</strong> permettent
+                d'organiser les droits d'accès.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>LDAP</h4>
+            <p>
+                LDAP permet aux services du domaine d'accéder
+                aux informations de l'annuaire.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>Kerberos</h4>
+            <p>
+                Kerberos fournit le mécanisme d'authentification
+                utilisé au sein du domaine.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h3>Gestion des droits</h3>
+
+    <div class="card">
+
+        <p>
+            Les accès aux ressources sont organisés à partir
+            des groupes Active Directory.
+        </p>
+
+        <br>
+
+        <ul>
+            <li><strong>Alice</strong> → groupe Direction → partage Direction</li>
+            <li><strong>Bob</strong> → groupe Comptabilite → partage Comptabilite</li>
+            <li><strong>Commun</strong> → partage accessible aux utilisateurs autorisés</li>
+        </ul>
+
+        <br>
+
+        <p>
+            Cette organisation permet de centraliser la gestion
+            des utilisateurs et d'appliquer les droits en fonction
+            de leur groupe.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h3>Poste client Windows</h3>
+
+    <div class="card">
+
+        <ul>
+            <li>Adresse IP obtenue automatiquement par DHCP</li>
+            <li>DNS fourni automatiquement par DHCP</li>
+            <li>Résolution du domaine jungtech.local</li>
+            <li>Authentification avec un compte Active Directory</li>
+            <li>Accès aux partages Samba</li>
+            <li>Application des droits selon les groupes AD</li>
+        </ul>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h3>Validation</h3>
+
+    <div class="grid">
+
+        <div class="card">
+            <h4>DHCP</h4>
+            <p>Attribution automatique des adresses IP.</p>
+        </div>
+
+        <div class="card">
+            <h4>DNS</h4>
+            <p>Résolution des noms internes et des services AD.</p>
+        </div>
+
+        <div class="card">
+            <h4>Active Directory</h4>
+            <p>Authentification centralisée des utilisateurs.</p>
+        </div>
+
+        <div class="card">
+            <h4>Samba</h4>
+            <p>Partage de fichiers sur le réseau.</p>
+        </div>
+
+        <div class="card">
+            <h4>Winbind</h4>
+            <p>Intégration des comptes AD avec Linux.</p>
+        </div>
+
+        <div class="card">
+            <h4>Kerberos</h4>
+            <p>Authentification au sein du domaine.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h3>Captures du projet</h3>
+
+    <div class="screenshots">
+
+        <img src="1.png" alt="Architecture VirtualBox">
+
+        <img src="2.png" alt="Configuration VM01">
+
+        <img src="3.png" alt="Configuration VM02">
+
+        <img src="4.png" alt="Configuration réseau Windows">
+
+        <img src="5.png" alt="Authentification Active Directory">
+
+        <img src="6.png" alt="Partages réseau Samba">
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>Projet JungTech — Infrastructure systèmes & réseaux</p>
+
+</footer>
+
+</body>
+</html>
