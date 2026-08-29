@@ -1,1 +1,244 @@
-<!DOCTYPE html> <html lang="fr"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Ethan Jung — Administrateur Systèmes & Réseaux</title> <style> * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: Arial, sans-serif; background: #0f1115; color: #ffffff; } header { padding: 25px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #252932; } header h1 { font-size: 22px; } nav a { color: #ffffff; text-decoration: none; margin-left: 30px; font-size: 15px; } nav a:hover { color: #4da3ff; } .hero { min-height: 75vh; display: flex; flex-direction: column; justify-content: center; padding: 0 8%; } .hero p { color: #4da3ff; font-size: 18px; margin-bottom: 15px; } .hero h2 { font-size: 60px; max-width: 800px; line-height: 1.05; margin-bottom: 25px; } .hero .description { color: #aeb4c0; font-size: 18px; max-width: 650px; line-height: 1.6; margin-bottom: 35px; } .button { display: inline-block; background: #4da3ff; color: #ffffff; padding: 14px 25px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-right: 10px; } .button.secondary { background: transparent; border: 1px solid #3a3f49; } section { padding: 90px 8%; border-top: 1px solid #252932; } section h2 { font-size: 35px; margin-bottom: 20px; } section p { color: #aeb4c0; max-width: 750px; line-height: 1.7; } .project { margin-top: 40px; padding: 35px; border: 1px solid #292e38; border-radius: 10px; max-width: 900px; } .project h3 { font-size: 28px; margin-bottom: 10px; } .tags { margin: 20px 0; } .tag { display: inline-block; padding: 7px 12px; margin: 4px; border-radius: 4px; background: #1b2028; color: #b9c0cc; font-size: 13px; } footer { padding: 30px 8%; color: #707783; border-top: 1px solid #252932; } </style> </head> <body> <header> <h1>ETHAN JUNG</h1> <nav> <a href="#accueil">Accueil</a> <a href="#apropos">À propos</a> <a href="#projets">Projets</a> <a href="#contact">Contact</a> </nav> </header> <main> <section class="hero" id="accueil"> <p>ADMINISTRATION SYSTÈMES & RÉSEAUX</p> <h2>Je construis et administre des infrastructures informatiques.</h2> <div class="description"> Futur administrateur systèmes et réseaux, je développe mes compétences à travers des projets pratiques autour de Linux, Windows, Active Directory, DNS, DHCP et Samba. </div> <div> <a href="#projets" class="button">Voir mes projets</a> <a href="#contact" class="button secondary">Me contacter</a> </div> </section> <section id="apropos"> <h2>À propos</h2> <p> Je suis actuellement en formation dans le domaine de l'administration systèmes et réseaux. Je développe mes compétences à travers des environnements virtualisés et des projets pratiques reproduisant des infrastructures informatiques d'entreprise. </p> </section> <section id="projets"> <h2>Projets</h2> <div class="project"> <h3>JungTech — Infrastructure systèmes & réseaux</h3> <p> Mise en place d'une infrastructure informatique virtualisée comprenant un contrôleur de domaine Active Directory, un serveur de fichiers, un serveur DHCP/DNS et un poste client Windows. </p> <div class="tags"> <span class="tag">Linux</span> <span class="tag">Windows 11</span> <span class="tag">Active Directory</span> <span class="tag">Samba</span> <span class="tag">DNS</span> <span class="tag">DHCP</span> <span class="tag">Kerberos</span> <span class="tag">Winbind</span> <span class="tag">VirtualBox</span> </div> <a href="#" class="button">Voir le projet</a> </div> </section> <section id="contact"> <h2>Contact</h2> <p> Pour toute question concernant mes projets ou mon parcours, vous pouvez me contacter. </p> </section> </main> <footer> © 2026 Ethan Jung — Portfolio </footer> </body> </html>
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ethan Jung — Administrateur Systèmes & Réseaux</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f1115;
+            color: #ffffff;
+        }
+
+        header {
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #252932;
+        }
+
+        header h1 {
+            font-size: 22px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #4da3ff;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 8%;
+        }
+
+        .hero p {
+            color: #4da3ff;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 60px;
+            max-width: 800px;
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero .description {
+            color: #aeb4c0;
+            font-size: 18px;
+            max-width: 650px;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #4da3ff;
+            color: #ffffff;
+            padding: 14px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .button.secondary {
+            background: transparent;
+            border: 1px solid #3a3f49;
+        }
+
+        section {
+            padding: 90px 8%;
+            border-top: 1px solid #252932;
+        }
+
+        section h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            color: #aeb4c0;
+            max-width: 750px;
+            line-height: 1.7;
+        }
+
+        .project {
+            margin-top: 40px;
+            padding: 35px;
+            border: 1px solid #292e38;
+            border-radius: 10px;
+            max-width: 900px;
+        }
+
+        .project h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .tags {
+            margin: 20px 0;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 7px 12px;
+            margin: 4px;
+            border-radius: 4px;
+            background: #1b2028;
+            color: #b9c0cc;
+            font-size: 13px;
+        }
+
+        footer {
+            padding: 30px 8%;
+            color: #707783;
+            border-top: 1px solid #252932;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>ETHAN JUNG</h1>
+
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" id="accueil">
+
+        <p>ADMINISTRATION SYSTÈMES & RÉSEAUX</p>
+
+        <h2>Je construis et administre des infrastructures informatiques.</h2>
+
+        <div class="description">
+            Futur administrateur systèmes et réseaux, je développe mes compétences
+            à travers des projets pratiques autour de Linux, Windows, Active Directory,
+            DNS, DHCP et Samba.
+        </div>
+
+        <div>
+            <a href="#projets" class="button">Voir mes projets</a>
+            <a href="#contact" class="button secondary">Me contacter</a>
+        </div>
+
+    </section>
+
+
+    <section id="apropos">
+
+        <h2>À propos</h2>
+
+        <p>
+            Je suis actuellement en formation dans le domaine de l'administration
+            systèmes et réseaux. Je développe mes compétences à travers des
+            environnements virtualisés et des projets pratiques reproduisant
+            des infrastructures informatiques d'entreprise.
+        </p>
+
+    </section>
+
+
+    <section id="projets">
+
+        <h2>Projets</h2>
+
+        <div class="project">
+
+            <h3>JungTech — Infrastructure systèmes & réseaux</h3>
+
+            <p>
+                Mise en place d'une infrastructure informatique virtualisée comprenant
+                un contrôleur de domaine Active Directory, un serveur de fichiers,
+                un serveur DHCP/DNS et un poste client Windows.
+            </p>
+
+            <div class="tags">
+                <span class="tag">Linux</span>
+                <span class="tag">Windows 11</span>
+                <span class="tag">Active Directory</span>
+                <span class="tag">Samba</span>
+                <span class="tag">DNS</span>
+                <span class="tag">DHCP</span>
+                <span class="tag">Kerberos</span>
+                <span class="tag">Winbind</span>
+                <span class="tag">VirtualBox</span>
+            </div>
+
+            <a href="#" class="button">Voir le projet</a>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <p>
+            Pour toute question concernant mes projets ou mon parcours,
+            vous pouvez me contacter.
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+    © 2026 Ethan Jung — Portfolio
+</footer>
+
+</body>
+</html>
+```
