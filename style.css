@@ -838,6 +838,18 @@ h2 {
   padding: 3px 8px;
 }
 
+.cap-tag {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: var(--font-display);
+  font-size: 0.74rem;
+  color: var(--accent);
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  border-radius: 4px;
+  padding: 3px 9px;
+}
+
 /* -------------------- Responsive -------------------- */
 
 @media (max-width: 860px) {

@@ -273,6 +273,19 @@
           <div class="code-line">\\192.168.10.10\Comptabilite</div>
         </div>
       </div>
+
+      <div class="detail-block">
+        <div class="detail-label">Poste Windows</div>
+        <div class="detail-content">
+          <h3>Poste client Windows 11</h3>
+          <p>
+            Le poste Windows 11 reçoit automatiquement son adressage réseau par DHCP,
+            est joint au domaine <strong>JUNGTECH.LOCAL</strong> et s'authentifie auprès
+            de l'Active Directory hébergé sur DC01. Une fois authentifié, l'utilisateur
+            accède aux partages réseau hébergés sur VM01 selon les groupes AD auxquels il appartient.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -313,70 +326,87 @@
       <div class="eyebrow">Captures d'écran</div>
       <div class="section-intro">
         <h2>Aperçu du laboratoire</h2>
-        <p>Voici quelques captures d'écran du laboratoire virtuel JUNGTech</p>
+        <p>Quelques captures d'écran du laboratoire virtuel JungTech.</p>
       </div>
 
       <div class="gallery-grid">
         <div class="gallery-item">
           <figure>
-            <img src="1.png" alt="Capture d'écran 1 du laboratoire JungTech — légende à compléter">
+            <img src="1.png" alt="Attribution des groupes Active Directory dans le laboratoire JungTech">
             <figcaption>
               <div class="cap-title">Capture 1</div>
               <div class="cap-desc">Un aperçu des attributions de groupes</div>
-              <span class="edit-note">Groupes</span>
+              <span class="cap-tag">Groupes</span>
             </figcaption>
           </figure>
         </div>
         <div class="gallery-item">
           <figure>
-            <img src="2.png" alt="Capture d'écran 2 du laboratoire JungTech — légende à compléter">
+            <img src="2.png" alt="Configuration DHCP et DNS sur VM01 dans le laboratoire JungTech">
             <figcaption>
               <div class="cap-title">Capture 2</div>
               <div class="cap-desc">Un aperçu de la configuration DHCP et DNS</div>
-              <span class="edit-note">DHCP/DNS</span>
+              <span class="cap-tag">DHCP / DNS</span>
             </figcaption>
           </figure>
         </div>
         <div class="gallery-item">
           <figure>
-            <img src="3.png" alt="Capture d'écran 3 du laboratoire JungTech — légende à compléter">
+            <img src="3.png" alt="Adressage IP du contrôleur de domaine DC01 dans le laboratoire JungTech">
             <figcaption>
               <div class="cap-title">Capture 3</div>
-              <div class="cap-desc">Adressage IP sur DC01/</div>
-              <span class="edit-note">Contrôleur de Domaine</span>
+              <div class="cap-desc">Adressage IP sur DC01</div>
+              <span class="cap-tag">Contrôleur de domaine</span>
             </figcaption>
           </figure>
         </div>
         <div class="gallery-item">
           <figure>
-            <img src="4.png" alt="Capture d'écran 4 du laboratoire JungTech — légende à compléter">
+            <img src="4.png" alt="Adressage IP du serveur réseau VM01 dans le laboratoire JungTech">
             <figcaption>
               <div class="cap-title">Capture 4</div>
               <div class="cap-desc">Adressage IP sur VM01</div>
-              <span class="edit-note">Serveur Réseau</span>
+              <span class="cap-tag">Serveur réseau</span>
             </figcaption>
           </figure>
         </div>
         <div class="gallery-item">
           <figure>
-            <img src="5.png" alt="Capture d'écran 5 du laboratoire JungTech — légende à compléter">
+            <img src="5.png" alt="Les trois machines virtuelles du laboratoire JungTech en cours d'exécution">
             <figcaption>
               <div class="cap-title">Capture 5</div>
-              <div class="cap-desc">Les trois machines virtuels en routes pour créer le réseau</div>
-              <span class="edit-note">Virtuals Machines</span>
+              <div class="cap-desc">Les trois machines virtuelles réunies pour former le réseau</div>
+              <span class="cap-tag">Machines virtuelles</span>
             </figcaption>
           </figure>
         </div>
         <div class="gallery-item">
           <figure>
-            <img src="6.png" alt="Capture d'écran 6 du laboratoire JungTech — légende à compléter">
+            <img src="6.png" alt="Accès au partage réseau Commun depuis un poste du domaine JungTech">
             <figcaption>
               <div class="cap-title">Capture 6</div>
-              <div class="cap-desc">Le fichier \Commun disponible a toutes les utilisateurs en serveur privé</div>
-              <span class="edit-note">Fichier Partagé</span>
+              <div class="cap-desc">Le partage \\Commun accessible à tous les utilisateurs du domaine</div>
+              <span class="cap-tag">Fichier partagé</span>
             </figcaption>
           </figure>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONCLUSION ============ -->
+  <section>
+    <div class="container">
+      <div class="eyebrow">Conclusion</div>
+      <div class="section-intro">
+        <h2>Ce que ce projet m'a permis de mettre en pratique</h2>
+        <p>
+          JungTech est un laboratoire personnel réalisé en environnement virtualisé : il ne
+          reproduit pas les conditions d'une infrastructure de production réelle, mais m'a permis
+          de mettre en pratique l'administration Linux, les réseaux, le DNS, le DHCP,
+          Active Directory, l'authentification, le partage de fichiers, la gestion des droits
+          par groupes et l'administration d'une infrastructure virtualisée dans son ensemble.
+        </p>
       </div>
     </div>
   </section>
