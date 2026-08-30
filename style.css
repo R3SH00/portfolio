@@ -486,16 +486,16 @@ h2 {
 }
 
 .project-visual svg {
-  width: 120%;
-  max-width: 240px;
+  width: 100%;
+  max-width: 350px;
   height: auto;
   display: block;
   margin: 0 auto;
 }
 
 .project-visual svg {
-  width: 120%;
-  max-width: 240px;
+  width: 100%;
+  max-width: 350px;
   height: auto;
   display: block;
   margin: 0 auto;
