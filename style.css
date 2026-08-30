@@ -485,18 +485,12 @@ h2 {
   margin-bottom: 28px;
 }
 
-.project-visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
 .project-visual svg {
   width: 100%;
-  max-width: 350px;
+  max-width: 240px;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 /* -------------------- Contact -------------------- */
