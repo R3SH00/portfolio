@@ -485,6 +485,17 @@ h2 {
   margin-bottom: 28px;
 }
 
+.project-visual {
+  background:
+    linear-gradient(160deg, var(--surface-elevated), var(--bg-alt));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  border-left: 1px solid var(--border);
+  min-height: 280px;
+}
+
 .project-visual svg {
   width: 100%;
   max-width: 240px;
@@ -658,7 +669,7 @@ h2 {
   width: 100%;
   height: auto;
   min-width: 560px;
-  max-width: 760px;
+  max-width: 800px;
 }
 
 /* Two-column detail sections */
@@ -823,16 +834,6 @@ h2 {
 .gallery-item .cap-desc {
   font-size: 0.88rem;
   color: var(--text-muted);
-}
-
-.edit-note {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 0.76rem;
-  color: var(--warn);
-  border: 1px dashed var(--warn);
-  border-radius: 4px;
-  padding: 3px 8px;
 }
 
 .cap-tag {
