@@ -485,12 +485,11 @@ h2 {
   margin-bottom: 28px;
 }
 
-.project-visual svg {
+.project-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 350px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
 }
 
 .project-visual svg {
@@ -498,7 +497,6 @@ h2 {
   max-width: 350px;
   height: auto;
   display: block;
-  margin: 0 auto;
 }
 
 /* -------------------- Contact -------------------- */
