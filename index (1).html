@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethan Jung — Portfolio Systèmes &amp; Réseaux</title>
+<meta name="description" content="Portfolio d'Ethan Jung, à la recherche d'une alternance en systèmes et réseaux. Projet JungTech : infrastructure Active Directory, DHCP, DNS et partages Samba.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" id="nav">
+    <a href="index.html" class="logo">Ethan<span>Jung</span></a>
+    <ul class="nav-links">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#a-propos">À propos</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="Infra-Reseau.html" class="btn btn-outline">Voir le projet</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="accueil">
+    <div class="container hero-grid">
+      <div>
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          Disponible pour une alternance
+        </div>
+        <h1>Ethan Jung<br><span class="accent">Systèmes &amp; Réseaux.</span></h1>
+        <p class="hero-lead">
+          Futur alternant en administration systèmes et réseaux, je conçois et teste
+          des infrastructures dans des environnements virtualisés pour comprendre
+          comment un réseau d'entreprise fonctionne réellement — du DHCP à l'annuaire Active Directory.
+        </p>
+        <div class="hero-actions">
+          <a href="Infra-Reseau.html" class="btn btn-primary">
+            Voir le projet <span class="btn-arrow">→</span>
+          </a>
+          <a href="#contact" class="btn btn-outline">Me contacter</a>
+          <!-- Ajuste le nom de fichier ci-dessous s'il diffère dans ton dépôt -->
+          <a href="CV-Ethan-Jung.pdf" class="btn btn-outline" download>Télécharger mon CV</a>
+        </div>
+        <div class="hero-meta">
+          <span><strong>Formation</strong> — CESI, Administration Systèmes &amp; Réseaux</span>
+          <span><strong>Recherche</strong> — Alternance systèmes / réseaux</span>
+        </div>
+      </div>
+
+      <div class="hero-panel" aria-hidden="true">
+        <div class="hero-panel-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="label">jungtech-network — status</span>
+        </div>
+        <div class="hero-panel-body">
+          <div class="hero-panel-row"><span>Réseau</span><span class="val">192.168.10.0/24</span></div>
+          <div class="hero-panel-row"><span>VM01 — DHCP / BIND9 / Samba</span><span class="val ok">actif</span></div>
+          <div class="hero-panel-row"><span>DC01 — Samba AD DC / LDAP / Kerberos</span><span class="val ok">actif</span></div>
+          <div class="hero-panel-row"><span>Domaine</span><span class="val">JUNGTECH.LOCAL</span></div>
+          <div class="hero-panel-row"><span>Client Windows 11</span><span class="val ok">joint au domaine</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ À PROPOS ============ -->
+  <section id="a-propos">
+    <div class="container">
+      <div class="eyebrow">À propos</div>
+      <div class="section-intro">
+        <h2>Apprendre en construisant.</h2>
+        <p>
+          Je prépare actuellement une formation orientée Administration Systèmes &amp; Réseaux au CESI,
+          et je recherche une alternance dans ce domaine : systèmes, réseaux, administration
+          informatique ou support informatique.
+        </p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>🎯 Ce que je recherche</h3>
+          <p class="cat-desc">
+            Une alternance formatrice où je peux mettre en pratique et approfondir
+            l'administration de réseaux et de systèmes en conditions réelles.
+          </p>
+        </div>
+        <div class="skill-card">
+          <h3>🧪 Comment j'apprends</h3>
+          <p class="cat-desc">
+            En reproduisant des infrastructures d'entreprise dans des laboratoires
+            virtualisés (VirtualBox), pour comprendre chaque brique avant de l'utiliser.
+          </p>
+        </div>
+        <div class="skill-card">
+          <h3>🚀 Ce que je peux apporter</h3>
+          <p class="cat-desc">
+            De la motivation, de la rigueur et une réelle capacité à apprendre vite
+            de nouvelles technologies système et réseau.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPÉTENCES ============ -->
+  <section id="competences">
+    <div class="container">
+      <div class="eyebrow">Compétences</div>
+      <div class="section-intro">
+        <h2>Technologies mises en pratique</h2>
+        <p>
+          Compétences utilisées et testées dans le cadre de mon projet personnel
+          JungTech, en environnement virtualisé.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>🖥️ Systèmes</h3>
+          <p class="cat-desc">Configurés et utilisés en environnement virtualisé</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Linux / Ubuntu</span>
+            <span class="skill-tag">Windows 11</span>
+            <span class="skill-tag">VirtualBox</span>
+            <span class="skill-tag">Linux Server</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>🌐 Réseaux</h3>
+          <p class="cat-desc">Mis en place et testés</p>
+          <div class="skill-tags">
+            <span class="skill-tag">IPv4</span>
+            <span class="skill-tag">DHCP</span>
+            <span class="skill-tag">DNS</span>
+            <span class="skill-tag">BIND9</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>🗂️ Annuaire &amp; authentification</h3>
+          <p class="cat-desc">Configurés dans le cadre du projet JungTech</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Active Directory</span>
+            <span class="skill-tag">Samba AD DC</span>
+            <span class="skill-tag">LDAP</span>
+            <span class="skill-tag">Kerberos</span>
+            <span class="skill-tag">Winbind</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>🔐 Administration</h3>
+          <p class="cat-desc">Utilisées pour gérer et sécuriser le lab</p>
+          <div class="skill-tags">
+            <span class="skill-tag">SSH</span>
+            <span class="skill-tag">Gestion des utilisateurs</span>
+            <span class="skill-tag">Gestion des groupes</span>
+            <span class="skill-tag">Gestion des droits d'accès</span>
+            <span class="skill-tag">Partage de fichiers réseau</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJETS ============ -->
+  <section id="projets">
+    <div class="container">
+      <div class="eyebrow">Projet principal</div>
+      <div class="section-intro">
+        <h2>JungTech — Infrastructure systèmes &amp; réseaux</h2>
+        <p>Un laboratoire virtualisé reproduisant une petite infrastructure d'entreprise.</p>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-content">
+          <h3>JungTech</h3>
+          <div class="subtitle">Infrastructure systèmes &amp; réseaux</div>
+          <p>
+            Conception et mise en place d'un laboratoire réseau avec DHCP, DNS interne,
+            contrôleur de domaine Active Directory (Samba AD DC) et partages de fichiers
+            centralisés, testé avec un poste client Windows 11.
+          </p>
+          <div class="project-tags">
+            <span class="skill-tag">DHCP</span>
+            <span class="skill-tag">BIND9</span>
+            <span class="skill-tag">Samba AD DC</span>
+            <span class="skill-tag">LDAP / Kerberos</span>
+            <span class="skill-tag">Winbind</span>
+          </div>
+          <div>
+            <a href="Infra-Reseau.html" class="btn btn-primary">
+              Voir le projet <span class="btn-arrow">→</span>
+            </a>
+          </div>
+        </div>
+        <div class="project-visual" aria-hidden="true">
+          <svg width="260" height="220" viewBox="0 0 260 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="20" width="100" height="60" rx="6" stroke="#4c8bf5" stroke-width="1.5" fill="#161b22"/>
+            <text x="60" y="45" fill="#e6edf3" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">VM01</text>
+            <text x="60" y="62" fill="#8b949e" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle">.10.10</text>
+            <rect x="150" y="20" width="100" height="60" rx="6" stroke="#4c8bf5" stroke-width="1.5" fill="#161b22"/>
+            <text x="200" y="45" fill="#e6edf3" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">DC01</text>
+            <text x="200" y="62" fill="#8b949e" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle">.10.20</text>
+            <line x1="110" y1="50" x2="150" y2="50" stroke="#3fb950" stroke-width="1.5"/>
+            <line x1="60" y1="80" x2="60" y2="160" stroke="#3fb950" stroke-width="1.5"/>
+            <line x1="60" y1="120" x2="200" y2="120" stroke="#2a313c" stroke-width="1.5"/>
+            <line x1="200" y1="80" x2="200" y2="120" stroke="#2a313c" stroke-width="1.5"/>
+            <rect x="10" y="160" width="100" height="50" rx="6" stroke="#2a313c" stroke-width="1.5" fill="#10151c"/>
+            <text x="60" y="182" fill="#e6edf3" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">Windows 11</text>
+            <text x="60" y="198" fill="#8b949e" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">DHCP 100-200</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="container">
+      <div class="eyebrow">Contact</div>
+      <div class="section-intro">
+        <h2>Discutons de votre besoin d'alternance</h2>
+        <p>N'hésitez pas à me contacter pour échanger sur une opportunité d'alternance.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:ethanjung67@icloud.com">
+          <div class="label">Email</div>
+          <div class="value">ethanjung67@icloud.com</div>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/ethan-jung67/" target="_blank" rel="noopener">
+          <div class="label">LinkedIn</div>
+          <div class="value">linkedin.com/in/ethan-jung67</div>
+        </a>
+        <a class="contact-card" href="https://github.com/R3SH00" target="_blank" rel="noopener">
+          <div class="label">GitHub</div>
+          <div class="value">github.com/R3SH00</div>
+        </a>
+        <a class="contact-card" href="tel:+33674523371">
+          <div class="label">Téléphone</div>
+          <div class="value">06 74 52 33 71</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <span>© <span id="year"></span> Ethan Jung</span>
+    <span><a href="Infra-Reseau.html">Projet JungTech</a></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
