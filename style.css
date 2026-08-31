@@ -494,6 +494,7 @@ h2 {
   padding: 32px;
   border-left: 1px solid var(--border);
   min-height: 280px;
+  height: 100%;        /* ajouté */
 }
 
 .project-visual svg {
